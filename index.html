@@ -1,89 +1,369 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>La Bottega delle Delizie | Pasta fresca, gastronomia e dolci a Renazzo</title>
-  <meta name="description" content="La Bottega delle Delizie a Renazzo: pasta fresca, gastronomia e dolci artigianali dal 1998.">
-  <style>
-    body{margin:0;font-family:Arial, sans-serif;background:#fbf4ea;color:#3a160d}
-    header{padding:24px 8%;display:flex;justify-content:space-between;align-items:center;background:#fff8ef}
-    .brand{font-weight:700;font-size:22px}
-    .phone{background:#842000;color:white;padding:12px 18px;border-radius:999px;text-decoration:none}
-    .hero{padding:90px 8%;background:linear-gradient(90deg,#fff4e6 0%,#f5d3a5 100%)}
-    h1{font-family:Georgia,serif;font-size:64px;line-height:1;margin:0;color:#842000}
-    h2{font-size:28px;letter-spacing:3px;text-transform:uppercase;color:#842000}
-    p{font-size:19px;line-height:1.6;max-width:680px}
-    .buttons a{display:inline-block;margin:10px 10px 0 0;padding:15px 24px;border-radius:999px;text-decoration:none;font-weight:700}
-    .wa{background:#25D366;color:#fff}
-    .map{background:#842000;color:#fff}
-    section{padding:70px 8%}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
-    .card{background:white;padding:28px;border-radius:22px;box-shadow:0 10px 30px #0001}
-    .card h3{color:#842000}
-    .contact{background:#842000;color:white}
-    .contact a{color:white}
-    footer{text-align:center;padding:28px;background:#3a160d;color:#fff}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Bottega delle Delizie | Renazzo</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Arial, sans-serif;
+background:#f8f2ea;
+color:#3b1f14;
+line-height:1.6;
+}
+
+header{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:10;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+color:white;
+font-weight:bold;
+font-size:22px;
+}
+
+.logo img{
+width:70px;
+height:70px;
+border-radius:50%;
+background:white;
+padding:6px;
+}
+
+header a{
+background:#8b2b12;
+color:white;
+padding:12px 20px;
+border-radius:999px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url('negozio-esterno.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+color:white;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h1{
+font-size:72px;
+line-height:0.95;
+margin-bottom:25px;
+font-family: Georgia, serif;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+}
+
+.buttons{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 26px;
+border-radius:999px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn-whatsapp{
+background:#25D366;
+color:white;
+}
+
+.btn-dark{
+background:#8b2b12;
+color:white;
+}
+
+.section{
+padding:90px 8%;
+}
+
+.section h2{
+font-size:42px;
+margin-bottom:25px;
+color:#8b2b12;
+font-family: Georgia, serif;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card h3{
+margin-bottom:12px;
+color:#8b2b12;
+font-size:28px;
+}
+
+.highlight{
+background:#8b2b12;
+color:white;
+border-radius:30px;
+padding:70px 8%;
+margin:80px 8%;
+}
+
+.highlight h2{
+color:white;
+}
+
+footer{
+background:#2d140d;
+color:white;
+padding:60px 8%;
+}
+
+footer h3{
+margin-bottom:20px;
+font-size:28px;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+}
+
+.whatsapp-float{
+position:fixed;
+right:25px;
+bottom:25px;
+background:#25D366;
+color:white;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+z-index:999;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:52px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.logo span{
+display:none;
+}
+
+}
+
+</style>
+
 </head>
 <body>
 
 <header>
-  <div class="brand">La Bottega delle Delizie</div>
-  <a class="phone" href="tel:+39051900604">051 900604</a>
-</header>
 
-<div class="hero">
-  <h2>Dal 1998</h2>
-  <h1>La Bottega<br>delle Delizie</h1>
-  <p><strong>Tradizione artigianale emiliana a Renazzo.</strong><br>
-  Pasta fresca, gastronomia e dolci preparati ogni giorno con cura, passione e ingredienti selezionati.</p>
-  <div class="buttons">
-    <a class="wa" href="https://wa.me/393318097263">Ordina su WhatsApp</a>
-    <a class="map" href="https://maps.apple.com/place?place-id=I43F66CB8CF67B47F">Come raggiungerci</a>
-  </div>
+<div class="logo">
+<img src="logo.png">
+<span>La Bottega delle Delizie</span>
 </div>
 
-<section>
-  <h2>I nostri prodotti</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Pasta fresca</h3>
-      <p>Tortelloni di zucca, pasta ripiena e specialità preparate artigianalmente.</p>
-    </div>
-    <div class="card">
-      <h3>Gastronomia</h3>
-      <p>Piatti pronti, lasagne e proposte sfiziose per ogni giorno.</p>
-    </div>
-    <div class="card">
-      <h3>Dolci artigianali</h3>
-      <p>Dalla tenerina ai dolci della tradizione, preparati con ricette genuine.</p>
-    </div>
-    <div class="card">
-      <h3>Idee regalo</h3>
-      <p>Confezioni e specialità per ricorrenze, pranzi e momenti da condividere.</p>
-    </div>
-  </div>
+<a href="tel:+39051900604">
+051 900604
+</a>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Tradizione<br>
+artigianale<br>
+emiliana
+</h1>
+
+<p>
+Dal 1998 pasta fresca, gastronomia e dolci artigianali preparati ogni giorno a Renazzo con passione e ingredienti selezionati.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-whatsapp" href="https://wa.me/393318097263">
+Ordina su WhatsApp
+</a>
+
+<a class="btn btn-dark" href="mailto:info@labottegadelledelizie.com">
+Contattaci
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<section>
-  <h2>Una bottega autentica</h2>
-  <p>Nel cuore di Renazzo, La Bottega delle Delizie porta avanti dal 1998 una tradizione fatta di manualità, sapori emiliani e attenzione quotidiana alla qualità.</p>
+<section class="section">
+
+<h2>I sapori della nostra bottega</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="tortelloni.jpeg">
+
+<div class="card-content">
+
+<h3>Tortelloni di zucca</h3>
+
+<p>
+Una delle specialità più amate della tradizione ferrarese, preparati artigianalmente nel nostro laboratorio.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="banco-gastronomia.jpeg">
+
+<div class="card-content">
+
+<h3>Gastronomia fresca</h3>
+
+<p>
+Lasagne, pasta fresca, secondi e preparazioni quotidiane pensate per portare in tavola la cucina emiliana.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="banco-dolci.jpeg">
+
+<div class="card-content">
+
+<h3>Dolci artigianali</h3>
+
+<p>
+Dalla Tenerina ferrarese alle crostate e specialità della tradizione preparate con cura ogni giorno.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="contact">
-  <h2>Contatti</h2>
-  <p>
-    Via di Renazzo 58/B – 44045 Renazzo (FE)<br>
-    Tel. <a href="tel:+39051900604">051 900604</a><br>
-    WhatsApp <a href="https://wa.me/393318097263">+39 331 809 7263</a><br>
-    Email <a href="mailto:info@labottegadelledelizie.com">info@labottegadelledelizie.com</a>
-  </p>
+<section class="highlight">
+
+<h2>Dal 1998 a Renazzo</h2>
+
+<p>
+La Bottega delle Delizie nasce dall’amore per la cucina artigianale emiliana.
+Ogni giorno prepariamo pasta fresca, gastronomia e dolci con lavorazioni genuine e attenzione alla qualità.
+</p>
+
 </section>
 
 <footer>
-  La Bottega delle Delizie · Pasta fresca · Gastronomia · Dolci artigianali
+
+<h3>La Bottega delle Delizie</h3>
+
+<p>
+Via di Renazzo 58/B – 44045 Renazzo (FE)
+</p>
+
+<p>
+Telefono:
+<a href="tel:+39051900604">
+051 900604
+</a>
+</p>
+
+<p>
+WhatsApp:
+<a href="https://wa.me/393318097263">
++39 331 809 7263
+</a>
+</p>
+
+<p>
+Email:
+<a href="mailto:info@labottegadelledelizie.com">
+info@labottegadelledelizie.com
+</a>
+</p>
+
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/393318097263">
+✆
+</a>
 
 </body>
 </html>
