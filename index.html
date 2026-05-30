@@ -234,29 +234,41 @@ display:none;
 <body>
 
 <div id="avviso-chiusura" style="
-background:#7b1e1e;
+background:#8b2b1b;
 color:white;
 text-align:center;
-padding:12px;
-font-size:16px;
+padding:11px 45px 11px 15px;
+font-size:15px;
 font-weight:600;
 position:relative;
 z-index:9999;
 ">
-📢 Chiusure straordinarie: 1 giugno e 10 giugno 2026.
-Per informazioni e ordini: 051 900604 oppure WhatsApp.
+📅 Chiusure straordinarie negozio:
+<strong>1 giugno</strong> e <strong>10 giugno 2026</strong>.
+Per informazioni e ordini:
+<a href="https://wa.me/3933318097263" style="color:white;text-decoration:underline;font-weight:700;">WhatsApp</a>
+oppure
+<a href="tel:+39051900604" style="color:white;text-decoration:underline;font-weight:700;">051 900604</a>.
 
 <span onclick="document.getElementById('avviso-chiusura').style.display='none';"
 style="
 position:absolute;
 right:15px;
-top:10px;
+top:8px;
 cursor:pointer;
-font-size:20px;
+font-size:22px;
 ">
-✕
+×
 </span>
 </div>
+
+<script>
+  const oggi = new Date();
+  const fineAvviso = new Date('2026-06-11T00:00:00');
+  if (oggi >= fineAvviso) {
+    document.getElementById('avviso-chiusura').style.display = 'none';
+  }
+</script>
 
 <header>
 
